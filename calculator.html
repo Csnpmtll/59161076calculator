@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Document responsive across devices. -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Document's character set. -->
+    <meta charset="UTF-8">
+	<title>Calculater</title>
+	<!-- Linking CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+	<div>
+	<section>
+	<div class="content">
+    <div class="w3-container w3-black">
+      <h2>Calculator</h2>
+    </div><br>
+    <input class="inputbox1" type="text" id="firstNumber" placeholder="put firstNumber">
+    <input class="inputbox2" type="text" id="secondNumber" placeholder="put secondNumber"><br><br>
+	<p>
+    <button class="w3-button w3-xlarge w3-black" id="sumButton" onclick="getSum()" style="margin-left: 15x;">+</button>
+    <button class="w3-button w3-xlarge w3-black" id="sumButton" onclick="getMinus()" style="margin-left: 30px;">-</button>
+    <button class="w3-button w3-xlarge w3-black" id="sumButton" onclick="getMultiply()" style="margin-left: 30px;">*</button>
+    <button class="w3-button w3-xlarge w3-black" id="sumButton" onclick="getDivide()" style="margin-left: 25px;">/</button>
+	<button class="w3-button w3-xlarge w3-black" id="sumButton" onclick="getDivide()" style="margin-left: 25px;">%</button>
+	<button class="w3-button w3-xlarge w3-black" id="sumButton" onclick="getPow()" style="margin-left: 25px;">^</button>
+	</p>
+
+
+    <div class="answer" id="output"></div>
+
+    <script>
+        var firstNumber = document.getElementById("firstNumber");
+        var secondNumber = document.getElementById("secondNumber");
+        var output = document.getElementById("output");
+
+        function getSum(){
+            let sum = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+            showResult(sum);
+        }
+        function getMinus(){
+            let sum = parseInt(firstNumber.value) - parseInt(secondNumber.value);
+            showResult(sum);
+        }
+        function getMultiply(){
+            let sum = parseInt(firstNumber.value) * parseInt(secondNumber.value);
+            showResult(sum);
+        }
+        function getDivide(){
+            let sum = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+            showResult(sum);
+        }
+		function getMod(){
+            let sum = parseInt(firstNumber.value) % parseInt(secondNumber.value);
+            showResult(sum);
+        }function getPow(){
+            let sum = Math.pow(parseInt(firstNumber.value),parseInt(secondNumber.value));
+            showResult(sum);
+        }
+        function showResult (result){
+            output.innerHTML = "Answer = " + result;
+        }
+        
+
+    </script>
+	</section>
+	</div>
+    <video autoplay loop id="video-background" muted plays-inline>
+	<source src="assets/video/light.mp4" type="video/mp4">
+	</video>
+    
+</body>
+</html>
