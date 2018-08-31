@@ -24,17 +24,17 @@ section	{
 }
 .inputbox1{
 	position: fixed;
-	left:20px;
+	left:30px;
 	width: auto;
 	height: auto;
-	padding: 10px;
+	padding: 7px;
 }
 .inputbox2{
 	position: fixed;
-	left:280px;
+	left:255px;
 	width: auto;
 	height: auto;
-	padding: 10px;
+	padding: 7px;
 }
 .content {
 	position: fixed;
